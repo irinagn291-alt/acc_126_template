@@ -87,7 +87,7 @@ struct _TcYg8801Mf: View {
                 .padding(.bottom, 16)
             }
         case ._e4:
-            StateNote(glyph: "tray", title: "No pressings", message: "Nothing matched "\(model._xTm5100)". Try a different spelling or just the artist.")
+            StateNote(glyph: "tray", title: "No pressings", message: "Nothing matched \"\(model._xTm5100)\". Try a different spelling or just the artist.")
             Spacer()
         case ._e5(let msg):
             StateNote(glyph: "wifi.exclamationmark", title: "Couldn't dig", message: msg)
