@@ -19,9 +19,6 @@ struct _MdVp7734Rq: View {
                         divider
                         row("star.fill", "Rate Vinora", _YcPg5562Wv.gold) { requestReview() }
                     }
-                    group("LEGAL") {
-                        row("checkerboard.shield", "Privacy policy", _YcPg5562Wv.neon) { web = .privacy }
-                    }
                     about
                 }
                 .padding(22)
@@ -109,12 +106,8 @@ private func _sd(_ b: String) -> String {
 }
 
 private enum _WebDest: Identifiable {
-    case contact, privacy
+    case contact
     var id: String { title }
-    var title: String { self == .contact ? "Contact" : "Privacy" }
-    var address: String {
-        self == .contact
-            ? _sd("aHR0cHM6Ly9uZXctdmlub3JhY3JhdGUucHJvL2NvbnRhY3Q=")
-            : _sd("aHR0cHM6Ly9uZXctdmlub3JhY3JhdGUucHJvL3ByaXZhY3k=")
-    }
+    var title: String { "Contact" }
+    var address: String { _sd("aHR0cHM6Ly9uZXctdmlub3JhY3JhdGUucHJvL2NvbnRhY3QtdXM=") }
 }
